@@ -13,8 +13,17 @@ function _draw() {
   </div>
   <button class="btn btn-primary" onclick="app.charactersController.prev()">Previous</button>
   <button class="btn btn-primary" onclick="app.charactersController.next()">Next</button>
-  <button class="btn btn-primary" onclick="app.charactersController.prev()">Previous</button>
   <button class="btn btn-primary" onclick="app.charactersController.male()">Male</button>
+  `
+  let male = ProxyState.male
+  let mtemplate = ''
+  male.forEach(m => mtemplate += m.Template)
+  document.getElementById("male").innerHTML = /*html*/`
+  <div className="card-columns male">
+  <hr>
+  <h4 id="malestitle" hidden>Males</h4>
+      ${mtemplate}
+  </div>
   `
 }
 
@@ -22,6 +31,7 @@ function _draw() {
 export default class CharactersController {
   constructor() {
     ProxyState.on("characters", _draw);
+    ProxyState.on("male", _draw);
     _draw()
   }
 

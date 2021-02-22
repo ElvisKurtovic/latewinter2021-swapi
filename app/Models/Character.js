@@ -11,9 +11,9 @@ export default class Character {
         return /*html*/`
         <div class="card p-2">
             ${this.name}
-            mass: ${this.mass}
-            hair color: ${this.hairColor}
-            gender: ${this.gender}
+            Mass: ${this.mass}
+            Hair Color: ${this.hairColor}
+            Gender: ${this.gender}
         </div>
         `
     }

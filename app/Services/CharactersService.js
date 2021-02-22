@@ -48,7 +48,7 @@ class CharactersService {
 
     male() {
 
-
+        let temp = ProxyState.male
         ProxyState.characters.forEach(element => {
             if (element.gender == "male") {
                 ProxyState.male.push(element)
@@ -57,7 +57,8 @@ class CharactersService {
                 ProxyState.female.push(element)
             }
 
-        });
+        }); ProxyState.male = temp
+
 
         //         ProxyState.male = res.data.results.map(rawCharacterData => new Character(rawCharacterData))
         //         ProxyState.next = res.data.next
@@ -66,7 +67,8 @@ class CharactersService {
 
         //     }).catch(err => console.error(err))
         // }
-
+        let maleElem = document.getElementById("malestitle")
+        maleElem.toggleAttribute("hidden")
 
     }
 }

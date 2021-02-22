@@ -10,8 +10,8 @@ export default class Planet {
         return /*html*/`
         <div class="card p-2">
             ${this.name}
-            diameter: ${this.diameter}
-            climate: ${this.climate}
+            Diameter: ${this.diameter}
+            Climate: ${this.climate}
         </div>
         `
     }
