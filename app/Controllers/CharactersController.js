@@ -11,7 +11,10 @@ function _draw() {
   <div className="card-columns characters">
       ${template}
   </div>
+  <button class="btn btn-primary" onclick="app.charactersController.prev()">Previous</button>
   <button class="btn btn-primary" onclick="app.charactersController.next()">Next</button>
+  <button class="btn btn-primary" onclick="app.charactersController.prev()">Previous</button>
+  <button class="btn btn-primary" onclick="app.charactersController.male()">Male</button>
   `
 }
 
@@ -24,6 +27,13 @@ export default class CharactersController {
 
   next() {
     charactersService.next()
+  }
+  prev() {
+    charactersService.prev()
+  }
+
+  male() {
+    charactersService.male()
   }
 
 }

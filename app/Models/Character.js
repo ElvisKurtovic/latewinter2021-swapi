@@ -3,6 +3,7 @@ export default class Character {
         this.name = data.name
         this.mass = data.mass || "unknown"
         this.hairColor = data.hairColor || data.hair_color
+        this.gender = data.gender || "unknown"
     }
 
     get Template() {
@@ -12,6 +13,7 @@ export default class Character {
             ${this.name}
             mass: ${this.mass}
             hair color: ${this.hairColor}
+            gender: ${this.gender}
         </div>
         `
     }
